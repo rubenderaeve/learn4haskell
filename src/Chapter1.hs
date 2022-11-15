@@ -645,7 +645,11 @@ Try to introduce variables in this task (either with let-in or where) to avoid
 specifying complex expressions.
 -}
 
-sumLast2 n = error "sumLast2: Not implemented!"
+sumLast2 :: Int -> Int
+sumLast2 n =
+  let last = mod n 10
+      secondLast = mod (div n 10) 10
+  in last + secondLast
 
 
 {- |

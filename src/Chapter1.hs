@@ -491,7 +491,8 @@ Implement a function that returns the last digit of a given number.
   whether it works for you!
 -}
 -- DON'T FORGET TO SPECIFY THE TYPE IN HERE
-lastDigit n = error "lastDigit: Not implemented!"
+lastDigit :: Int -> Int
+lastDigit n = mod n 10
 
 
 {- |

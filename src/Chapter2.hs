@@ -502,6 +502,13 @@ side. You can have even nested patterns (as in the last example
 above). In other words, when writing a pattern like "(x:y:xs)", it is
 the same as writing "(x:(y:xs))".
 
+https://en.wikibooks.org/wiki/Haskell/Pattern_matching
+Furthermore, since [x, y, z] is just syntactic sugar for x:y:z:[], we can achieve something like dropThree using pattern matching alone:
+
+dropThree :: [a] -> [a]
+dropThree (_:_:_:xs) = xs
+dropThree _          = []
+
 ♫ NOTE: Often, pattern matching can be replaced with conditional
   checks (if-then-else, guards) and vice versa. In some cases
   pattern-matching can be more efficient; in other cases, it can produce

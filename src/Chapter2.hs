@@ -348,7 +348,13 @@ from it!
 ghci> :l src/Chapter2.hs
 -}
 subList :: Int -> Int -> [a] -> [a]
-subList = error "subList: Not implemented!"
+subList x y a
+  | null a = []
+  | x > y = []
+  | x < 0 = []
+  | otherwise = fst (splitAt y (snd (splitAt x a)))
+
+
 
 {- |
 =⚔️= Task 4

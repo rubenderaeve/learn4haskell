@@ -878,7 +878,8 @@ list.
 
 🕯 HINT: Use the 'cycle' function
 -}
-rotate = error "rotate: Not implemented!"
+rotate :: Int -> [Int] -> [Int]
+rotate a l = if length l == 0 then [] else subList a (length l) (cycle l)
 
 {- |
 =💣= Task 12*
